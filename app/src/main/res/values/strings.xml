@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">WeatherApp!</string>
     <string name="cityname">CityName</string>
+    <string name="todo">TODO</string>
+    <string name="choose_your_city">Choose your city</string>
+    <string name="todo">TODO</string>
+    <string name="choose">CHOOSE</string>
 </resources>
