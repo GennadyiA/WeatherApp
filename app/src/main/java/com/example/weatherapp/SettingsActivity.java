@@ -1,28 +1,22 @@
 package com.example.weatherapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceFragmentCompat;
 
-public class FindCity extends AppCompatActivity {
-
-    Spinner spinner;
-    ArrayList spinnerArrayList;
-    ArrayAdapter spinnerAdapter;
+public class SettingsActivity extends AppCompatActivity {
     private final String TAG = "Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_find_city);
+        setContentView(R.layout.settings_activity);
         String instanceState;
         if (savedInstanceState == null){
             instanceState = "Первый запуск!";
@@ -32,20 +26,7 @@ public class FindCity extends AppCompatActivity {
         }
         Toast.makeText(getApplicationContext(), instanceState + " - onCreate()", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "Create");
-
-        spinner = findViewById(R.id.spinner);
-        spinnerArrayList = new ArrayList();
-
-        spinnerArrayList.add("Moscow");
-        spinnerArrayList.add("Tokyo");
-        spinnerArrayList.add("Paris");
-
-        spinnerAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, spinnerArrayList);
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinner.setAdapter(spinnerAdapter);
     }
-
-
 
     @Override
     protected void onStart() {
@@ -104,12 +85,6 @@ public class FindCity extends AppCompatActivity {
         Log.d(TAG, "Destroy");
     }
 
-    public void onClick(View view) {
-        Intent intent = new Intent(FindCity.this, MainActivity.class);
-        startActivity(intent);
-    }
-    public void onClick1(View view) {
-        Intent intent = new Intent(FindCity.this, SettingsActivity.class);
-        startActivity(intent);
-    }
+
+
 }
