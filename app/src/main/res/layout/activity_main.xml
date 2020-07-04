@@ -8,10 +8,38 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="411dp"
-        android:layout_height="269dp"
-        android:contentDescription="@android:string/untitled"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="439dp"
+        android:layout_height="749dp"
+        android:contentDescription="@string/todo1"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sky" />
+        app:srcCompat="@drawable/main_background2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="149dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="140dp"
+        android:text="@string/moscow"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="586dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="110dp"
+        android:onClick="onClick"
+        android:text="@string/change_city"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
