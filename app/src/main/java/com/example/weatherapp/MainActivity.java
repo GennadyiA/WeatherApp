@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
             }
             Toast.makeText(getApplicationContext(), instanceState + " - onCreate()", Toast.LENGTH_SHORT).show();
             Log.d(TAG, "Create");
+
+            Intent choosenCity = getIntent();
+            String city = choosenCity.getStringExtra("city");
+            TextView textView = findViewById(R.id.textView);
+            textView.setText(city);
         }
 
         @Override

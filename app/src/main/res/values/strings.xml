@@ -25,4 +25,10 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="change_city">change city</string>
+    <string name="editTextDate">дата</string>
+    <string name="температура">27</string>
+    <string name="время">время</string>
+    <string name="дата">дата</string>
+    <string name="завтра">завтра</string>
+    <string name="послезавтра">послезавтра</string>
 </resources>
